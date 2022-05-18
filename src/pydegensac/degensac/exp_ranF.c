@@ -315,7 +315,7 @@ int exp_ransacF(double *u, int len, double th, double conf, int max_sam,
     f1 = sol;
     f2 = sol+9;
 
-    seed = rand();
+    seed = 0;
 
     /*  srand(RAND_SEED++); */
     while(no_sam < max_sam) {
@@ -326,7 +326,7 @@ int exp_ransacF(double *u, int len, double th, double conf, int max_sam,
         rsampleT(Z, 9, pool, 7, len, A);
         loadSample(u, samidx, 7, 6, u7);
 
-        seed = rand();
+        seed = seed + 1;
         ////printf("Seed: %d\n",seed);
 
 
@@ -888,7 +888,7 @@ int exp_ransacFcustom(double *u, int len, double th, double conf, int max_sam,
     f1 = sol;
     f2 = sol+9;
 
-    seed = rand();
+    seed = 0;
 
     /*  srand(RAND_SEED++); */
     while(no_sam < max_sam) {
@@ -899,7 +899,7 @@ int exp_ransacFcustom(double *u, int len, double th, double conf, int max_sam,
         rsampleT(Z, 9, pool, 7, len, A);
         loadSample(u, samidx, 7, 6, u7);
 
-        seed = rand();
+        seed = seed + 1;
         ////printf("Seed: %d\n",seed);
 
 
@@ -1328,7 +1328,7 @@ int exp_ransacFcustomLAF(double *u, double *u_1, double *u_2,int len, double th,
     f1 = sol;
     f2 = sol+9;
 
-    seed = rand();
+    seed = 0;
 
     /*  srand(RAND_SEED++); */
     while(no_sam < max_sam) {
@@ -1339,7 +1339,7 @@ int exp_ransacFcustomLAF(double *u, double *u_1, double *u_2,int len, double th,
         rsampleT(Z, 9, pool, 7, len, A);
         loadSample(u, samidx, 7, 6, u7);
 
-        seed = rand();
+        seed = seed + 1;
         ////printf("Seed: %d\n",seed);
 
 

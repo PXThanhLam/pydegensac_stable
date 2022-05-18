@@ -536,7 +536,7 @@ Score exp_ransacHcustomLAF (double *u, double *u_1, double *u_2,
 
 
     no_sam = 0;
-    seed = rand();
+    seed = 0;
 
     samidx = pool + len - 4;
 
@@ -549,7 +549,7 @@ Score exp_ransacHcustomLAF (double *u, double *u_1, double *u_2,
         no_sam++;
         srand(seed);
         multirsampleT(Z, 9, 2, pool, 4, len, M);
-        seed = rand();
+        seed = seed + 1;
 
         /* orientation */
 #ifndef __OC_OFF__
